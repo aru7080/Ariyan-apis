@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ariyan API Demo</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #eee;
+    margin: 0; padding: 0;
+    display: flex; flex-direction: column; align-items: center;
+    min-height: 100vh;
+  }
+  header {
+    margin: 20px 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .container {
+    width: 90%;
+    max-width: 600px;
+  }
+  button {
+    background: #1db954;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px 20px 5px;
+    border-radius: 25px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  button:hover {
+    background: #1ed760;
+  }
+  .result-card {
+    background: #242424;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #1db954aa;
+    min-height: 80px;
+  }
+  .result-card img {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+  .footer {
+    margin-top: auto;
+    padding: 10px;
+    color: #777;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+<header>Ariyan API Demo</header>
+<div class="container">
+  <button onclick="fetchQuote()">Get Random Quote</button>
+  <button onclick="fetchJoke()">Get Random Joke</button>
+  <button onclick="fetchAnime()">Get Random Anime Image</button>
+
+  <div id="result" class="result-card">Result will appear here...</div>
+</div>
+
+<div class="footer">© 2025 Ariyan API Demo</div>
+
+<script>
+  const API_BASE = 'https://ariyan-apis.onrender.com';
+
+  async function fetchQuote() {
+    showLoading();
+    try {
+      const res = await fetch(`${API_BASE}/quote`);
+      const data = await res.json();
+      showResult(`<strong>Quote:</strong> ${data.quote} <br/><small>— ${data.author}</small>`);
+    } catch (err) {
+      showResult('Error fetching quote.');
+    }
+  }
+
+  async function fetchJoke() {
+    showLoading();
+    try {
+      const res = await fetch(`${API_BASE}/joke`);
+      const data = await res.json();
+      showResult(`<strong>Joke:</strong> ${data.joke} <br/><small>— ${data.author}</small>`);
+    } catch (err) {
+      showResult('Error fetching joke.');
+    }
+  }
+
+  async function fetchAnime() {
+    showLoading();
+    try {
+      const res = await fetch(`${API_BASE}/anime`);
+      const data = await res.json();
+      showResult(`<img src="${data.anime}" alt="Anime Image" />`);
+    } catch (err) {
+      showResult('Error fetching anime image.');
+    }
+  }
+
+  function showLoading() {
+    document.getElementById('result').innerHTML = 'Loading...';
+  }
+
+  function showResult(html) {
+    document.getElementById('result').innerHTML = html;
+  }
+</script>
+</body>
+</html>
