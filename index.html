@@ -1,115 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ariyan API Demo</title>
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #121212;
-    color: #eee;
-    margin: 0; padding: 0;
-    display: flex; flex-direction: column; align-items: center;
-    min-height: 100vh;
-  }
-  header {
-    margin: 20px 0;
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  .container {
-    width: 90%;
-    max-width: 600px;
-  }
-  button {
-    background: #1db954;
-    border: none;
-    padding: 10px 20px;
-    margin: 10px 5px 20px 5px;
-    border-radius: 25px;
-    font-size: 1rem;
-    color: white;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  button:hover {
-    background: #1ed760;
-  }
-  .result-card {
-    background: #242424;
-    padding: 15px 20px;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px #1db954aa;
-    min-height: 80px;
-  }
-  .result-card img {
-    max-width: 100%;
-    border-radius: 12px;
-  }
-  .footer {
-    margin-top: auto;
-    padding: 10px;
-    color: #777;
-    font-size: 0.9rem;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ariyan API Site</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1db954;
+      padding: 2rem;
+      text-align: center;
+      font-size: 2rem;
+    }
+    main {
+      padding: 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section {
+      margin: 2rem 0;
+      background: #222;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px rgba(0, 255, 128, 0.3);
+    }
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+    button {
+      padding: 0.6rem 1.2rem;
+      border: none;
+      background: #1db954;
+      color: white;
+      font-size: 1rem;
+      border-radius: 999px;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    .result {
+      margin-top: 1rem;
+      background: #1b1b1b;
+      padding: 1rem;
+      border-radius: 10px;
+      min-height: 50px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #1a1a1a;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-<header>Ariyan API Demo</header>
-<div class="container">
-  <button onclick="fetchQuote()">Get Random Quote</button>
-  <button onclick="fetchJoke()">Get Random Joke</button>
-  <button onclick="fetchAnime()">Get Random Anime Image</button>
+<header>Ariyan APIs - Full HTML UI</header>
+<main>
 
-  <div id="result" class="result-card">Result will appear here...</div>
-</div>
+<section>
+  <h2>API Endpoint 1</h2>
+  <p>Fetch result for endpoint 1 from the Ariyan API server.</p>
+  <button onclick="fetchData('1')">Try Endpoint 1</button>
+  <div class="result" id="result-1">Result will be shown here.</div>
+</section>
 
-<div class="footer">© 2025 Ariyan API Demo</div>
+<section>
+  <h2>API Endpoint 2</h2>
+  <p>Fetch result for endpoint 2 from the Ariyan API server.</p>
+  <button onclick="fetchData('2')">Try Endpoint 2</button>
+  <div class="result" id="result-2">Result will be shown here.</div>
+</section>
 
+<section>
+  <h2>API Endpoint 3</h2>
+  <p>Fetch result for endpoint 3 from the Ariyan API server.</p>
+  <button onclick="fetchData('3')">Try Endpoint 3</button>
+  <div class="result" id="result-3">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 4</h2>
+  <p>Fetch result for endpoint 4 from the Ariyan API server.</p>
+  <button onclick="fetchData('4')">Try Endpoint 4</button>
+  <div class="result" id="result-4">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 5</h2>
+  <p>Fetch result for endpoint 5 from the Ariyan API server.</p>
+  <button onclick="fetchData('5')">Try Endpoint 5</button>
+  <div class="result" id="result-5">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 6</h2>
+  <p>Fetch result for endpoint 6 from the Ariyan API server.</p>
+  <button onclick="fetchData('6')">Try Endpoint 6</button>
+  <div class="result" id="result-6">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 7</h2>
+  <p>Fetch result for endpoint 7 from the Ariyan API server.</p>
+  <button onclick="fetchData('7')">Try Endpoint 7</button>
+  <div class="result" id="result-7">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 8</h2>
+  <p>Fetch result for endpoint 8 from the Ariyan API server.</p>
+  <button onclick="fetchData('8')">Try Endpoint 8</button>
+  <div class="result" id="result-8">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 9</h2>
+  <p>Fetch result for endpoint 9 from the Ariyan API server.</p>
+  <button onclick="fetchData('9')">Try Endpoint 9</button>
+  <div class="result" id="result-9">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 10</h2>
+  <p>Fetch result for endpoint 10 from the Ariyan API server.</p>
+  <button onclick="fetchData('10')">Try Endpoint 10</button>
+  <div class="result" id="result-10">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 11</h2>
+  <p>Fetch result for endpoint 11 from the Ariyan API server.</p>
+  <button onclick="fetchData('11')">Try Endpoint 11</button>
+  <div class="result" id="result-11">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 12</h2>
+  <p>Fetch result for endpoint 12 from the Ariyan API server.</p>
+  <button onclick="fetchData('12')">Try Endpoint 12</button>
+  <div class="result" id="result-12">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 13</h2>
+  <p>Fetch result for endpoint 13 from the Ariyan API server.</p>
+  <button onclick="fetchData('13')">Try Endpoint 13</button>
+  <div class="result" id="result-13">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 14</h2>
+  <p>Fetch result for endpoint 14 from the Ariyan API server.</p>
+  <button onclick="fetchData('14')">Try Endpoint 14</button>
+  <div class="result" id="result-14">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 15</h2>
+  <p>Fetch result for endpoint 15 from the Ariyan API server.</p>
+  <button onclick="fetchData('15')">Try Endpoint 15</button>
+  <div class="result" id="result-15">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 16</h2>
+  <p>Fetch result for endpoint 16 from the Ariyan API server.</p>
+  <button onclick="fetchData('16')">Try Endpoint 16</button>
+  <div class="result" id="result-16">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 17</h2>
+  <p>Fetch result for endpoint 17 from the Ariyan API server.</p>
+  <button onclick="fetchData('17')">Try Endpoint 17</button>
+  <div class="result" id="result-17">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 18</h2>
+  <p>Fetch result for endpoint 18 from the Ariyan API server.</p>
+  <button onclick="fetchData('18')">Try Endpoint 18</button>
+  <div class="result" id="result-18">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 19</h2>
+  <p>Fetch result for endpoint 19 from the Ariyan API server.</p>
+  <button onclick="fetchData('19')">Try Endpoint 19</button>
+  <div class="result" id="result-19">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 20</h2>
+  <p>Fetch result for endpoint 20 from the Ariyan API server.</p>
+  <button onclick="fetchData('20')">Try Endpoint 20</button>
+  <div class="result" id="result-20">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 21</h2>
+  <p>Fetch result for endpoint 21 from the Ariyan API server.</p>
+  <button onclick="fetchData('21')">Try Endpoint 21</button>
+  <div class="result" id="result-21">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 22</h2>
+  <p>Fetch result for endpoint 22 from the Ariyan API server.</p>
+  <button onclick="fetchData('22')">Try Endpoint 22</button>
+  <div class="result" id="result-22">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 23</h2>
+  <p>Fetch result for endpoint 23 from the Ariyan API server.</p>
+  <button onclick="fetchData('23')">Try Endpoint 23</button>
+  <div class="result" id="result-23">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 24</h2>
+  <p>Fetch result for endpoint 24 from the Ariyan API server.</p>
+  <button onclick="fetchData('24')">Try Endpoint 24</button>
+  <div class="result" id="result-24">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 25</h2>
+  <p>Fetch result for endpoint 25 from the Ariyan API server.</p>
+  <button onclick="fetchData('25')">Try Endpoint 25</button>
+  <div class="result" id="result-25">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 26</h2>
+  <p>Fetch result for endpoint 26 from the Ariyan API server.</p>
+  <button onclick="fetchData('26')">Try Endpoint 26</button>
+  <div class="result" id="result-26">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 27</h2>
+  <p>Fetch result for endpoint 27 from the Ariyan API server.</p>
+  <button onclick="fetchData('27')">Try Endpoint 27</button>
+  <div class="result" id="result-27">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 28</h2>
+  <p>Fetch result for endpoint 28 from the Ariyan API server.</p>
+  <button onclick="fetchData('28')">Try Endpoint 28</button>
+  <div class="result" id="result-28">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 29</h2>
+  <p>Fetch result for endpoint 29 from the Ariyan API server.</p>
+  <button onclick="fetchData('29')">Try Endpoint 29</button>
+  <div class="result" id="result-29">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 30</h2>
+  <p>Fetch result for endpoint 30 from the Ariyan API server.</p>
+  <button onclick="fetchData('30')">Try Endpoint 30</button>
+  <div class="result" id="result-30">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 31</h2>
+  <p>Fetch result for endpoint 31 from the Ariyan API server.</p>
+  <button onclick="fetchData('31')">Try Endpoint 31</button>
+  <div class="result" id="result-31">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 32</h2>
+  <p>Fetch result for endpoint 32 from the Ariyan API server.</p>
+  <button onclick="fetchData('32')">Try Endpoint 32</button>
+  <div class="result" id="result-32">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 33</h2>
+  <p>Fetch result for endpoint 33 from the Ariyan API server.</p>
+  <button onclick="fetchData('33')">Try Endpoint 33</button>
+  <div class="result" id="result-33">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 34</h2>
+  <p>Fetch result for endpoint 34 from the Ariyan API server.</p>
+  <button onclick="fetchData('34')">Try Endpoint 34</button>
+  <div class="result" id="result-34">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 35</h2>
+  <p>Fetch result for endpoint 35 from the Ariyan API server.</p>
+  <button onclick="fetchData('35')">Try Endpoint 35</button>
+  <div class="result" id="result-35">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 36</h2>
+  <p>Fetch result for endpoint 36 from the Ariyan API server.</p>
+  <button onclick="fetchData('36')">Try Endpoint 36</button>
+  <div class="result" id="result-36">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 37</h2>
+  <p>Fetch result for endpoint 37 from the Ariyan API server.</p>
+  <button onclick="fetchData('37')">Try Endpoint 37</button>
+  <div class="result" id="result-37">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 38</h2>
+  <p>Fetch result for endpoint 38 from the Ariyan API server.</p>
+  <button onclick="fetchData('38')">Try Endpoint 38</button>
+  <div class="result" id="result-38">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 39</h2>
+  <p>Fetch result for endpoint 39 from the Ariyan API server.</p>
+  <button onclick="fetchData('39')">Try Endpoint 39</button>
+  <div class="result" id="result-39">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 40</h2>
+  <p>Fetch result for endpoint 40 from the Ariyan API server.</p>
+  <button onclick="fetchData('40')">Try Endpoint 40</button>
+  <div class="result" id="result-40">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 41</h2>
+  <p>Fetch result for endpoint 41 from the Ariyan API server.</p>
+  <button onclick="fetchData('41')">Try Endpoint 41</button>
+  <div class="result" id="result-41">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 42</h2>
+  <p>Fetch result for endpoint 42 from the Ariyan API server.</p>
+  <button onclick="fetchData('42')">Try Endpoint 42</button>
+  <div class="result" id="result-42">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 43</h2>
+  <p>Fetch result for endpoint 43 from the Ariyan API server.</p>
+  <button onclick="fetchData('43')">Try Endpoint 43</button>
+  <div class="result" id="result-43">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 44</h2>
+  <p>Fetch result for endpoint 44 from the Ariyan API server.</p>
+  <button onclick="fetchData('44')">Try Endpoint 44</button>
+  <div class="result" id="result-44">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 45</h2>
+  <p>Fetch result for endpoint 45 from the Ariyan API server.</p>
+  <button onclick="fetchData('45')">Try Endpoint 45</button>
+  <div class="result" id="result-45">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 46</h2>
+  <p>Fetch result for endpoint 46 from the Ariyan API server.</p>
+  <button onclick="fetchData('46')">Try Endpoint 46</button>
+  <div class="result" id="result-46">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 47</h2>
+  <p>Fetch result for endpoint 47 from the Ariyan API server.</p>
+  <button onclick="fetchData('47')">Try Endpoint 47</button>
+  <div class="result" id="result-47">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 48</h2>
+  <p>Fetch result for endpoint 48 from the Ariyan API server.</p>
+  <button onclick="fetchData('48')">Try Endpoint 48</button>
+  <div class="result" id="result-48">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 49</h2>
+  <p>Fetch result for endpoint 49 from the Ariyan API server.</p>
+  <button onclick="fetchData('49')">Try Endpoint 49</button>
+  <div class="result" id="result-49">Result will be shown here.</div>
+</section>
+
+<section>
+  <h2>API Endpoint 50</h2>
+  <p>Fetch result for endpoint 50 from the Ariyan API server.</p>
+  <button onclick="fetchData('50')">Try Endpoint 50</button>
+  <div class="result" id="result-50">Result will be shown here.</div>
+</section>
+
+</main>
+<footer>© 2025 Ariyan APIs | Made with ❤️ in HTML + JavaScript</footer>
 <script>
-  const API_BASE = 'https://ariyan-apis.onrender.com';
-
-  async function fetchQuote() {
-    showLoading();
-    try {
-      const res = await fetch(`${API_BASE}/quote`);
-      const data = await res.json();
-      showResult(`<strong>Quote:</strong> ${data.quote} <br/><small>— ${data.author}</small>`);
-    } catch (err) {
-      showResult('Error fetching quote.');
-    }
-  }
-
-  async function fetchJoke() {
-    showLoading();
-    try {
-      const res = await fetch(`${API_BASE}/joke`);
-      const data = await res.json();
-      showResult(`<strong>Joke:</strong> ${data.joke} <br/><small>— ${data.author}</small>`);
-    } catch (err) {
-      showResult('Error fetching joke.');
-    }
-  }
-
-  async function fetchAnime() {
-    showLoading();
-    try {
-      const res = await fetch(`${API_BASE}/anime`);
-      const data = await res.json();
-      showResult(`<img src="${data.anime}" alt="Anime Image" />`);
-    } catch (err) {
-      showResult('Error fetching anime image.');
-    }
-  }
-
-  function showLoading() {
-    document.getElementById('result').innerHTML = 'Loading...';
-  }
-
-  function showResult(html) {
-    document.getElementById('result').innerHTML = html;
+  const BASE_URL = "https://ariyan-apis.onrender.com";
+  function fetchData(id) {
+    const map = {
+      "1": "/quote", "2": "/joke", "3": "/anime"
+    };
+    const endpoint = map[id] || "/quote";
+    const el = document.getElementById("result-" + id);
+    el.innerHTML = "Loading...";
+    fetch(BASE_URL + endpoint)
+      .then(res => res.json())
+      .then(data => {
+        if (data.quote) el.innerHTML = `<strong>Quote:</strong> ${data.quote}<br/><small>— ${data.author}</small>`;
+        else if (data.joke) el.innerHTML = `<strong>Joke:</strong> ${data.joke}<br/><small>— ${data.author}</small>`;
+        else if (data.anime) el.innerHTML = `<img src="${data.anime}" alt="anime"/>`;
+        else el.innerHTML = JSON.stringify(data);
+      })
+      .catch(() => el.innerHTML = "Error fetching data.");
   }
 </script>
 </body>
