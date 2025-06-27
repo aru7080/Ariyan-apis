@@ -1,6 +1,6 @@
 # GPT API
 
-Simple REST API using OpenAI GPT-3.5-turbo.
+Simple GPT-3.5-turbo REST API using OpenAI.
 
 ## Usage
 
@@ -11,8 +11,8 @@ GET /api/gpt?prompt=Your+question+here
 1. Install dependencies:
    npm install
 
-2. Start server:
+2. Run:
    npm start
 
-3. Access via:
-   http://localhost:3000/api/gpt?prompt=Hello
+3. Example:
+   http://localhost:3000/api/gpt?prompt=Say+hello
