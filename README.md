@@ -8,15 +8,11 @@ GET /api/gpt?prompt=Your+question+here
 
 ## Setup
 
-1. Create `.env` file with your OpenAI API key:
+1. Install dependencies:
+   npm install
 
-OPENAI_API_KEY=sk-xxxxxxxxxxxx
+2. Start server:
+   npm start
 
-2. Install and run:
-
-```
-npm install
-npm start
-```
-
-Access via http://localhost:3000/api/gpt?prompt=Hello
+3. Access via:
+   http://localhost:3000/api/gpt?prompt=Hello
